@@ -38,12 +38,16 @@ chatbot into an agent.
 ### Install
 
 ```bash
-pip install langgraph langchain-groq langchain-core python-dotenv
+pip install -r requirements.txt
 ```
 
 ### Configure
 
-Create a `.env` file in the project root:
+Copy the example env file and add your key:
+
+```bash
+cp .env.example .env
+```
 
 ```
 GROQ_API_KEY=your_key_here
@@ -100,7 +104,9 @@ multi-step loop in action.
 ```
 .
 ├── langgraph_agent.py    # the agent: state, tools, graph, and a demo runner
-├── .env                  # GROQ_API_KEY (not committed)
+├── requirements.txt      # dependencies
+├── .env.example          # template for your GROQ_API_KEY
+├── .env                  # your actual key (git-ignored, not committed)
 └── README.md
 ```
 
